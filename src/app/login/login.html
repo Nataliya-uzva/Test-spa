@@ -1,0 +1,38 @@
+<div class="login">
+	<div class="container">
+
+	<h1>login page</h1>
+
+	<form action="#" name="LoginForm" ng-submit="login.sendCredentials($event)">
+		<div class="row">
+			<div class="col-md-6">
+				<label for="name">Name</label>
+				<input type="text" id="name" ng-model="login.credentials.name" class="form-control login-input">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<label for="pass">Pass</label>
+				<input type="{{login.showPass ? 'text' : 'password'}}" id="pass" ng-model="login.credentials.pass" class="form-control login-input">
+					<span ng-click='login.showPass = !login.showPass' ng-class="{'glyphicon glyphicon-eye-close': login.showPass, 'glyphicon glyphicon-eye-open': !login.showPass}" class="btn span-class">
+					</span>
+			</div>
+		</div>
+		<!-- TODO: remove br -->
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<label for="remember">Remember Me</label>
+				<input id="remember" type="checkbox" ng-model="login.credentials.remember">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<button class="btn btn-success form-control">Submit</button>
+			</div>
+		</div>
+	</form>
+	</div>
+</div>
+
+

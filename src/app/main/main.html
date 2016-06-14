@@ -1,0 +1,12 @@
+
+<h1>main page</h1>
+
+<div class = 'goods'>
+	<div class="line" ng-repeat="item in main.items">
+		<img class="productItem" ng-src={{item.picture}}>
+		<p><b>Company: {{::item.company}}</b></p>
+		<p><b>Painter: {{::item.firstn}}  {{::item.lastn}}</b></p>
+		<h3 class="color-red">{{::item.price}}</h3>
+		<p><button class="btn btn-success" ng-click="main.buyGoods()">Buy</button></p>
+	</div>
+</div>
